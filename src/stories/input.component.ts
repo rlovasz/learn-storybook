@@ -6,8 +6,9 @@ import {Component, Input} from "@angular/core";
     <label [for]="id">{{label}}</label>
     <input
       type="text"
+      [placeholder]="placeholder"
       [id]="id"
-      [ngClass]=""
+      [ngClass]="'storybook-input'"
     >`,
   styleUrls: ['./input.css'],
 })
@@ -27,9 +28,4 @@ export default class InputComponent {
   @Input()
   placeholder?: string;
 
-  /*public get classes(): string[] {
-    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-
-    return ['storybook-button', `storybook-button--${this.size}`, mode];
-  }*/
 }
